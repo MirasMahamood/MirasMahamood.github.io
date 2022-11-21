@@ -22,13 +22,15 @@ import {
   ProgressModule,
   SharedModule,
   SpinnerModule,
-  TableModule,
   TabsModule,
   TooltipModule,
   UtilitiesModule
 } from '@coreui/angular';
 
+
 import { IconModule } from '@coreui/icons-angular';
+
+import {TableModule} from 'primeng/table';
 
 // utils
 import { DocsComponentsModule } from '@docs-components/docs-components.module';

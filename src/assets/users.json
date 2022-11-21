@@ -1,0 +1,37 @@
+{
+	"data": [
+		{
+			"id": "0001",
+			"firstName": "Miras",
+			"lastName": "Mahamood",
+			"designation": "Manager",
+			"code": "SPT-1",
+			"phone": 9043545568,
+			"email": "miras.ap@gmail.com",
+			"organization": "Org Name",
+			"image": ""
+		},
+        {
+			"id": "0002",
+			"firstName": "Alice",
+			"lastName": "Wonderland",
+			"designation": "Manager",
+			"code": "SPT-2",
+			"phone": 9043545568,
+			"email": "alice.wonderland@gmail.com",
+			"organization": "Org Name",
+			"image": ""
+		},
+        {
+			"id": "0003",
+			"firstName": "Vinoth",
+			"lastName": "Kumar",
+			"designation": "Manager",
+			"code": "SPT-3",
+			"phone": 9043545568,
+			"email": "vinoth.kumar@gmail.com",
+			"organization": "Org Name",
+			"image": ""
+		}
+	]
+}
