@@ -1,0 +1,28 @@
+<p-toast></p-toast>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="field grid">
+        <label for="symbol" class="col-12 mb-2 md:col-1 md:mb-0">Symbol</label>
+        <div class="col">
+            <input class="p-1" type="text" id="symbol" pInputText formControlName="symbol">
+            <small *ngIf="submitted && f['symbol'].errors" class="p-error block">Symbol is required.</small>
+        </div>
+    </div>
+    <div class="field grid">
+        <label for="text" class="col-12 mb-2 md:col-1 md:mb-0">Text</label>
+        <div class="col">
+            <input class="p-1" type="text" id="text" pInputText formControlName="text">
+            <small *ngIf="submitted && f['text'].errors" class="p-error block">Text is required.</small>
+        </div>
+    </div>
+    <div class="field grid">
+        <label for="longText" class="col-12 mb-2 md:col-1 md:mb-0">Long Text</label>
+        <div class="col">
+            <input class="p-1" type="text" id="longText" pInputText formControlName="longText">
+            <small *ngIf="submitted && f['longText'].errors" class="p-error block">Long text is required.</small>
+        </div>
+    </div>
+    <button pButton icon="pi pi-check" class="mr-1 p-button-sm">{{isAddMode ? 'Save' : 'Update'}}</button>
+    <a routerLink="/masters/uom/list" class="no-underline">
+        <button pButton label="Close" icon="pi pi-times" class="p-button-sm p-button-danger"></button>
+    </a>
+</form>

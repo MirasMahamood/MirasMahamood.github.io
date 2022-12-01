@@ -7,7 +7,6 @@ import {
   AccordionModule,
   BadgeModule,
   BreadcrumbModule,
-  ButtonModule,
   CardModule,
   CarouselModule,
   CollapseModule,
@@ -30,23 +29,25 @@ import {
 
 import { IconModule } from '@coreui/icons-angular';
 
+// primeng
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
 
 // utils
 import { DocsComponentsModule } from '@docs-components/docs-components.module';
 
 // views
-import { UsersComponent } from './users/users.component';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { CardsComponent } from './cards/cards.component';
 
 // Components Routing
-import { BaseRoutingModule } from './masters-routing.module';
+import { MastersRoutingModule } from './masters-routing.module';
+import { MastersComponent } from './masters.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    BaseRoutingModule,
+    MastersRoutingModule,
     AccordionModule,
     BadgeModule,
     BreadcrumbModule,
@@ -58,6 +59,7 @@ import { BaseRoutingModule } from './masters-routing.module';
     SharedModule,
     ListGroupModule,
     IconModule,
+    InputTextModule,
     ListGroupModule,
     PlaceholderModule,
     ProgressModule,
@@ -75,9 +77,8 @@ import { BaseRoutingModule } from './masters-routing.module';
     DocsComponentsModule,
   ],
   declarations: [
-    UsersComponent,
-    BreadcrumbsComponent,
-    CardsComponent
+    CardsComponent,
+    MastersComponent
   ],
 })
 export class MastersModule {}

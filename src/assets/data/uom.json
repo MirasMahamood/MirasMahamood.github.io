@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "symbol": "mm",
+        "text": "milli",
+        "longText": "Milli Metre"
+    },
+    {
+        "id": "2",
+        "symbol": "m",
+        "text": "metre",
+        "longText": "Metre"
+    },
+    {
+        "id": "3",
+        "symbol": "g",
+        "text": "milligram",
+        "longText": "Milli Gram"
+    }
+]

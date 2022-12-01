@@ -1,0 +1,53 @@
+<p-toast></p-toast>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="field grid">
+        <label for="id" class="col-12 mb-2 md:col-1 md:mb-0">User ID</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="text" id="id" pInputText formControlName="id">
+            <small *ngIf="submitted && f['id'].errors" class="p-error block">User ID is required.</small>
+        </div>
+        <label for="firstName" class="col-12 mb-2 md:col-1 md:mb-0">First Name</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="text" id="firstName" pInputText formControlName="firstName">
+            <small *ngIf="submitted && f['firstName'].errors" class="p-error block">First name is required.</small>
+        </div>
+        <label for="lastName" class="col-12 mb-2 md:col-1 md:mb-0">last Name</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="text" id="lastName" pInputText formControlName="lastName">
+            <small *ngIf="submitted && f['lastName'].errors" class="p-error block">Last name is required.</small>
+        </div>
+    </div>
+    <div class="field grid">
+        <label for="proofId" class="col-12 mb-2 md:col-1 md:mb-0">Proof ID</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="text" id="proofId" pInputText formControlName="proofId">
+            <small *ngIf="submitted && f['proofId'].errors" class="p-error block">Proof ID is required.</small>
+        </div>
+        <label for="designation" class="col-12 mb-2 md:col-1 md:mb-0">Designation</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="text" id="designation" pInputText formControlName="designation">
+        </div>
+        <label for="phone" class="col-12 mb-2 md:col-1 md:mb-0">Phone</label>
+        <div class="col-12 md:col-3">
+            <p-inputNumber inputStyleClass="p-1" inputId="phone" [useGrouping]="false" formControlName="phone"></p-inputNumber>
+            <small *ngIf="submitted && (f['phone'].hasError('min') || f['phone'].hasError('max'))" class="p-error block">Phone number should be 10 digit.</small>
+        </div>
+    </div>
+    <div class="field grid">
+        <label for="email" class="col-12 mb-2 md:col-1 md:mb-0">Email</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="email" id="email" pInputText formControlName="email">
+            <small *ngIf="submitted && f['email'].errors" class="p-error block">A valid email is required.</small>
+        </div>
+        <label for="email" class="col-12 mb-2 md:col-1 md:mb-0">Organization</label>
+        <div class="col-12 md:col-3">
+            <input class="p-1" type="organization" id="email" pInputText formControlName="organization">
+        </div>
+    </div>
+    <div class="text-center">
+        <button pButton icon="pi pi-check" class="mr-1 p-button-sm">{{isAddMode ? 'Save' : 'Update'}}</button>
+        <a routerLink="/masters/users/list" class="no-underline">
+            <button pButton label="Close" icon="pi pi-times" class="p-button-sm p-button-danger"></button>
+        </a>
+    </div>
+</form>

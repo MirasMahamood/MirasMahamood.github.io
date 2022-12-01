@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { UsersComponent } from './users/users.component';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { CardsComponent } from './cards/cards.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'users',
+    pathMatch: 'full'
+  },
   {
     path: '',
     data: {
@@ -13,23 +16,14 @@ const routes: Routes = [
     },
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'users',
-      },
-      {
         path: 'users',
-        component: UsersComponent,
-        data: {
-          title: 'Users',
-        },
+        loadChildren: () =>
+          import('./users/users.module').then((m) => m.UsersModule)
       },
       {
         path: 'uom',
-        component: BreadcrumbsComponent,
-        data: {
-          title: 'UoM',
-        },
+        loadChildren: () =>
+        import('./uom/uom.module').then((m) => m.UoMModule)
       },
       {
         path: 'part-master',
@@ -46,5 +40,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BaseRoutingModule {}
+export class MastersRoutingModule {}
 
